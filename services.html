@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - MediCare Plus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-heartbeat text-primary"></i>
+                <span class="fw-bold">MediCare Plus</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary btn-sm ms-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="fas fa-user"></i> Login
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-primary btn-sm ms-2" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                            <i class="fas fa-calendar-plus"></i> Book Now
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold">Our Medical Services</h1>
+                    <p class="lead text-muted">Comprehensive healthcare solutions with state-of-the-art facilities and expert medical professionals</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="emergency-contact text-center">
+                        <div class="emergency-card">
+                            <i class="fas fa-phone-alt text-danger fa-2x mb-2"></i>
+                            <h5 class="text-danger">Emergency Hotline</h5>
+                            <h4 class="text-dark">+1 (555) 911-HELP</h4>
+                            <small class="text-muted">Available 24/7</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Filter -->
+    <section class="services-filter py-4 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="filter-buttons text-center">
+                        <button class="btn btn-outline-primary me-2 mb-2 filter-btn active" data-filter="all">All Services</button>
+                        <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="cardiology">Cardiology</button>
+                        <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="neurology">Neurology</button>
+                        <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="pediatrics">Pediatrics</button>
+                        <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="orthopedics">Orthopedics</button>
+                        <button class="btn btn-outline-primary me-2 mb-2 filter-btn" data-filter="ophthalmology">Ophthalmology</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section class="detailed-services py-5">
+        <div class="container">
+            <div class="row g-4" id="servicesContainer">
+                <!-- Cardiology Services -->
+                <div class="col-lg-6 service-item" data-category="cardiology">
+                    <div class="service-detail-card">
+                        <div class="service-header">
+                            <div class="service-icon bg-primary">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <div class="service-title">
+                                <h4>Cardiology Department</h4>
+                                <p class="text-muted">Heart & Cardiovascular Care</p>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <p>Our cardiology department offers comprehensive heart care with advanced diagnostic and treatment capabilities.</p>
+                            <h6>Services Include:</h6>
+                            <ul class="service-list">
+                                <li><i class="fas fa-check text-success me-2"></i>ECG and Stress Testing</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Echocardiography</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Cardiac Catheterization</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Heart Surgery</li>
+                            </ul>
+                            <div class="service-footer">
+                                <div class="doctor-info">
+                                    <img src="https://images.pexels.com/photos/582750/pexels-photo-582750.jpeg?auto=compress&cs=tinysrgb&w=60" alt="Dr. Sarah Johnson" class="doctor-thumb">
+                                    <span>Dr. Sarah Johnson, Lead Cardiologist</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#appointmentModal">Book Appointment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neurology Services -->
+                <div class="col-lg-6 service-item" data-category="neurology">
+                    <div class="service-detail-card">
+                        <div class="service-header">
+                            <div class="service-icon bg-info">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="service-title">
+                                <h4>Neurology Department</h4>
+                                <p class="text-muted">Brain & Nervous System</p>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <p>Advanced neurological care for disorders of the brain, spinal cord, and nervous system.</p>
+                            <h6>Services Include:</h6>
+                            <ul class="service-list">
+                                <li><i class="fas fa-check text-success me-2"></i>EEG and EMG Testing</li>
+                                <li><i class="fas fa-check text-success me-2"></i>MRI and CT Scans</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Stroke Treatment</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Epilepsy Management</li>
+                            </ul>
+                            <div class="service-footer">
+                                <div class="doctor-info">
+                                    <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=60" alt="Dr. Michael Chen" class="doctor-thumb">
+                                    <span>Dr. Michael Chen, Neurologist</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#appointmentModal">Book Appointment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pediatrics Services -->
+                <div class="col-lg-6 service-item" data-category="pediatrics">
+                    <div class="service-detail-card">
+                        <div class="service-header">
+                            <div class="service-icon bg-success">
+                                <i class="fas fa-child"></i>
+                            </div>
+                            <div class="service-title">
+                                <h4>Pediatrics Department</h4>
+                                <p class="text-muted">Children's Healthcare</p>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <p>Comprehensive healthcare for infants, children, and adolescents with specialized pediatric care.</p>
+                            <h6>Services Include:</h6>
+                            <ul class="service-list">
+                                <li><i class="fas fa-check text-success me-2"></i>Well-Child Checkups</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Vaccinations</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Growth Monitoring</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Pediatric Emergency Care</li>
+                            </ul>
+                            <div class="service-footer">
+                                <div class="doctor-info">
+                                    <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=60" alt="Dr. Emily Rodriguez" class="doctor-thumb">
+                                    <span>Dr. Emily Rodriguez, Pediatrician</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#appointmentModal">Book Appointment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orthopedics Services -->
+                <div class="col-lg-6 service-item" data-category="orthopedics">
+                    <div class="service-detail-card">
+                        <div class="service-header">
+                            <div class="service-icon bg-warning">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                            <div class="service-title">
+                                <h4>Orthopedics Department</h4>
+                                <p class="text-muted">Bone & Joint Care</p>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <p>Expert treatment for bone, joint, and musculoskeletal conditions with advanced surgical options.</p>
+                            <h6>Services Include:</h6>
+                            <ul class="service-list">
+                                <li><i class="fas fa-check text-success me-2"></i>Joint Replacement</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Arthroscopic Surgery</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Sports Medicine</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Fracture Treatment</li>
+                            </ul>
+                            <div class="service-footer">
+                                <div class="doctor-info">
+                                    <img src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=60" alt="Dr. Robert Kim" class="doctor-thumb">
+                                    <span>Dr. Robert Kim, Orthopedic Surgeon</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#appointmentModal">Book Appointment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ophthalmology Services -->
+                <div class="col-lg-6 service-item" data-category="ophthalmology">
+                    <div class="service-detail-card">
+                        <div class="service-header">
+                            <div class="service-icon bg-secondary">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="service-title">
+                                <h4>Ophthalmology Department</h4>
+                                <p class="text-muted">Eye Care Services</p>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <p>Complete eye care services from routine exams to complex surgeries with state-of-the-art equipment.</p>
+                            <h6>Services Include:</h6>
+                            <ul class="service-list">
+                                <li><i class="fas fa-check text-success me-2"></i>Comprehensive Eye Exams</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Cataract Surgery</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Glaucoma Treatment</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Retinal Care</li>
+                            </ul>
+                            <div class="service-footer">
+                                <div class="doctor-info">
+                                    <img src="https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg?auto=compress&cs=tinysrgb&w=60" alt="Dr. Lisa Thompson" class="doctor-thumb">
+                                    <span>Dr. Lisa Thompson, Ophthalmologist</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#appointmentModal">Book Appointment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- General Medicine Services -->
+                <div class="col-lg-6 service-item" data-category="general">
+                    <div class="service-detail-card">
+                        <div class="service-header">
+                            <div class="service-icon bg-danger">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="service-title">
+                                <h4>General Medicine</h4>
+                                <p class="text-muted">Primary Healthcare</p>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <p>Comprehensive primary healthcare services for all your general medical needs and preventive care.</p>
+                            <h6>Services Include:</h6>
+                            <ul class="service-list">
+                                <li><i class="fas fa-check text-success me-2"></i>Health Checkups</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Preventive Care</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Chronic Disease Management</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Health Screenings</li>
+                            </ul>
+                            <div class="service-footer">
+                                <div class="doctor-info">
+                                    <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=60" alt="Dr. James Wilson" class="doctor-thumb">
+                                    <span>Dr. James Wilson, General Practitioner</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#appointmentModal">Book Appointment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Doctors Section -->
+    <section class="all-doctors py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Our Medical Team</h2>
+                <p class="lead text-muted">Meet our experienced healthcare professionals</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="doctor-profile-card">
+                        <div class="doctor-image">
+                            <img src="https://images.pexels.com/photos/582750/pexels-photo-582750.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Dr. Sarah Johnson" class="img-fluid">
+                            <div class="doctor-overlay">
+                                <div class="doctor-contact">
+                                    <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#appointmentModal">Book Appointment</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doctor-info">
+                            <h5 class="fw-bold">Dr. Sarah Johnson</h5>
+                            <p class="text-primary mb-1">Lead Cardiologist</p>
+                            <p class="text-muted small">MD, FACC - 15+ years experience</p>
+                            <div class="doctor-specialties">
+                                <span class="badge bg-light text-dark me-1">Heart Surgery</span>
+                                <span class="badge bg-light text-dark me-1">Interventional</span>
+                            </div>
+                            <div class="doctor-rating mt-2">
+                                <div class="rating">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <small class="text-muted ms-1">(120 reviews)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="doctor-profile-card">
+                        <div class="doctor-image">
+                            <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Dr. Michael Chen" class="img-fluid">
+                            <div class="doctor-overlay">
+                                <div class="doctor-contact">
+                                    <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#appointmentModal">Book Appointment</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doctor-info">
+                            <h5 class="fw-bold">Dr. Michael Chen</h5>
+                            <p class="text-primary mb-1">Neurologist</p>
+                            <p class="text-muted small">MD, PhD - 12+ years experience</p>
+                            <div class="doctor-specialties">
+                                <span class="badge bg-light text-dark me-1">Stroke Care</span>
+                                <span class="badge bg-light text-dark me-1">Epilepsy</span>
+                            </div>
+                            <div class="doctor-rating mt-2">
+                                <div class="rating">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <small class="text-muted ms-1">(98 reviews)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="doctor-profile-card">
+                        <div class="doctor-image">
+                            <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Dr. Emily Rodriguez" class="img-fluid">
+                            <div class="doctor-overlay">
+                                <div class="doctor-contact">
+                                    <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#appointmentModal">Book Appointment</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doctor-info">
+                            <h5 class="fw-bold">Dr. Emily Rodriguez</h5>
+                            <p class="text-primary mb-1">Pediatrician</p>
+                            <p class="text-muted small">MD, FAAP - 10+ years experience</p>
+                            <div class="doctor-specialties">
+                                <span class="badge bg-light text-dark me-1">Neonatal Care</span>
+                                <span class="badge bg-light text-dark me-1">Vaccines</span>
+                            </div>
+                            <div class="doctor-rating mt-2">
+                                <div class="rating">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <small class="text-muted ms-1">(85 reviews)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="doctor-profile-card">
+                        <div class="doctor-image">
+                            <img src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Dr. Robert Kim" class="img-fluid">
+                            <div class="doctor-overlay">
+                                <div class="doctor-contact">
+                                    <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#appointmentModal">Book Appointment</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doctor-info">
+                            <h5 class="fw-bold">Dr. Robert Kim</h5>
+                            <p class="text-primary mb-1">Orthopedic Surgeon</p>
+                            <p class="text-muted small">MD, FAAOS - 18+ years experience</p>
+                            <div class="doctor-specialties">
+                                <span class="badge bg-light text-dark me-1">Joint Replacement</span>
+                                <span class="badge bg-light text-dark me-1">Sports Medicine</span>
+                            </div>
+                            <div class="doctor-rating mt-2">
+                                <div class="rating">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <small class="text-muted ms-1">(156 reviews)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Resources -->
+    <section class="health-resources py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Health Resources</h2>
+                <p class="lead text-muted">Stay informed with our health tips and medical articles</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="resource-card">
+                        <div class="resource-image">
+                            <img src="https://images.pexels.com/photos/4047186/pexels-photo-4047186.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Heart Health" class="img-fluid">
+                        </div>
+                        <div class="resource-content">
+                            <h5>Heart Health: Prevention Tips</h5>
+                            <p class="text-muted">Learn about maintaining cardiovascular health and preventing heart disease through lifestyle changes.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="resource-card">
+                        <div class="resource-image">
+                            <img src="https://images.pexels.com/photos/3951628/pexels-photo-3951628.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mental Health" class="img-fluid">
+                        </div>
+                        <div class="resource-content">
+                            <h5>Mental Health Awareness</h5>
+                            <p class="text-muted">Understanding mental health and when to seek professional help for you and your loved ones.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="resource-card">
+                        <div class="resource-image">
+                            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Vaccination" class="img-fluid">
+                        </div>
+                        <div class="resource-content">
+                            <h5>Vaccination Guidelines</h5>
+                            <p class="text-muted">Stay up-to-date with vaccination schedules and immunization recommendations for all ages.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <h5 class="fw-bold mb-3">
+                            <i class="fas fa-heartbeat text-primary"></i> MediCare Plus
+                        </h5>
+                        <p>Your trusted healthcare partner providing excellent medical services with compassion and expertise.</p>
+                        <div class="social-links">
+                            <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Home</a></li>
+                        <li><a href="services.html" class="text-light">Services</a></li>
+                        <li><a href="contact.html" class="text-light">Contact</a></li>
+                        <li><a href="#" class="text-light">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html" class="text-light">Cardiology</a></li>
+                        <li><a href="services.html" class="text-light">Neurology</a></li>
+                        <li><a href="services.html" class="text-light">Pediatrics</a></li>
+                        <li><a href="services.html" class="text-light">Orthopedics</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="fw-bold mb-3">Contact Info</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@medicareplus.com</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Healthcare Ave, Medical City</li>
+                        <li class="text-danger"><i class="fas fa-exclamation-triangle me-2"></i> Emergency: 911</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 MediCare Plus. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">Privacy Policy</a>
+                    <a href="#" class="text-light">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Patient Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <hr>
+                    <div class="text-center">
+                        <p>Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register here</a></p>
+                        <a href="#" class="text-muted">Forgot Password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Patient Registration</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="regEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="regEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="regPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="regPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">
+                                I agree to the <a href="#">Terms & Conditions</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointment Modal -->
+    <div class="modal fade" id="appointmentModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Book an Appointment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="appointmentForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="patientName" class="form-label">Patient Name</label>
+                                <input type="text" class="form-control" id="patientName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="patientPhone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="patientPhone" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="patientEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="patientEmail" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="department" class="form-label">Department</label>
+                                <select class="form-select" id="department" required>
+                                    <option value="">Select Department</option>
+                                    <option value="cardiology">Cardiology</option>
+                                    <option value="neurology">Neurology</option>
+                                    <option value="pediatrics">Pediatrics</option>
+                                    <option value="orthopedics">Orthopedics</option>
+                                    <option value="ophthalmology">Ophthalmology</option>
+                                    <option value="general">General Medicine</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="doctor" class="form-label">Preferred Doctor</label>
+                                <select class="form-select" id="doctor">
+                                    <option value="">Any Available Doctor</option>
+                                    <option value="dr-johnson">Dr. Sarah Johnson</option>
+                                    <option value="dr-chen">Dr. Michael Chen</option>
+                                    <option value="dr-rodriguez">Dr. Emily Rodriguez</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="appointmentDate" class="form-label">Preferred Date</label>
+                                <input type="date" class="form-control" id="appointmentDate" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="appointmentTime" class="form-label">Preferred Time</label>
+                                <select class="form-select" id="appointmentTime" required>
+                                    <option value="">Select Time</option>
+                                    <option value="09:00">09:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="14:00">02:00 PM</option>
+                                    <option value="15:00">03:00 PM</option>
+                                    <option value="16:00">04:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reason" class="form-label">Reason for Visit</label>
+                            <textarea class="form-control" id="reason" rows="3" placeholder="Briefly describe your symptoms or reason for visit"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
